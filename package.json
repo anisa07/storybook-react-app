@@ -26,7 +26,8 @@
   "scripts": {
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "chromatic": "chromatic --project-token=CHROMATIC_PROJECT_TOKEN"
   },
   "eslintConfig": {
     "extends": [
