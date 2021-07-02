@@ -30,7 +30,8 @@
     "build-storybook": "build-storybook -s public",
     "test": "react-scripts test",
     "chromatic": "chromatic --project-token=CHROMATIC_PROJECT_TOKEN",
-    "build": "cross-env BABEL_ENV=production babel src -d dist"
+    "build": "cross-env BABEL_ENV=production babel src -d dist",
+    "release": "auto shipit --base-branch=main"
   },
   "eslintConfig": {
     "extends": [
