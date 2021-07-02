@@ -1,6 +1,6 @@
 {
   "name": "@anisa07/design-package-app-test",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "dependencies": {
     "@fontsource/roboto": "^4.4.5",
@@ -30,7 +30,7 @@
     "build-storybook": "build-storybook -s public",
     "test": "react-scripts test",
     "chromatic": "chromatic --project-token=CHROMATIC_PROJECT_TOKEN",
-    "build": "cross-env BABEL_ENV=production babel src -d dist",
+    "build": "tsc -p tsconfig.json",
     "release": "auto shipit --base-branch=main"
   },
   "eslintConfig": {
@@ -71,6 +71,7 @@
     "@storybook/node-logger": "^6.3.2",
     "@storybook/preset-create-react-app": "^3.1.7",
     "@storybook/react": "^6.3.2",
+    "@types/styled-components": "^5.1.10",
     "auto": "^10.29.3",
     "chromatic": "^5.9.2",
     "react-test-renderer": "^17.0.2",
