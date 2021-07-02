@@ -1,3 +1,17 @@
+# v0.1.2 (Fri Jul 02 2021)
+
+#### ⚠️ Pushed to `main`
+
+- apply changes ([@anisa07](https://github.com/anisa07))
+- v0.1.2 ([@anisa07](https://github.com/anisa07))
+- remove npm ([@anisa07](https://github.com/anisa07))
+
+#### Authors: 1
+
+- anisa07 ([@anisa07](https://github.com/anisa07))
+
+---
+
 # v0.1.1 (Fri Jul 02 2021)
 
 #### ⚠️ Pushed to `main`
