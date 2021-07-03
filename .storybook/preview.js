@@ -1,5 +1,5 @@
 import { withMuiTheme } from "@harelpls/storybook-addon-materialui";
-import {theme} from "./theme";
+import {theme} from "../src/shared/theme";
 import '@fontsource/roboto';
 import {GlobalStyle} from '../src/shared/global';
 
