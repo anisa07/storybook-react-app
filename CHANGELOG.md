@@ -1,3 +1,17 @@
+# v0.1.6 (Sat Jul 03 2021)
+
+#### ⚠️ Pushed to `main`
+
+- merge to local branch ([@anisa07](https://github.com/anisa07))
+- change readme ([@anisa07](https://github.com/anisa07))
+- fix editable name ([@anisa07](https://github.com/anisa07))
+
+#### Authors: 1
+
+- anisa07 ([@anisa07](https://github.com/anisa07))
+
+---
+
 # v0.1.5 (Sat Jul 03 2021)
 
 #### ⚠️ Pushed to `main`
