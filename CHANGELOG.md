@@ -1,3 +1,15 @@
+# v0.1.5 (Sat Jul 03 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix editable name ([@anisa07](https://github.com/anisa07))
+
+#### Authors: 1
+
+- anisa07 ([@anisa07](https://github.com/anisa07))
+
+---
+
 # v0.1.4 (Fri Jul 02 2021)
 
 #### ⚠️ Pushed to `main`
