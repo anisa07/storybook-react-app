@@ -21,6 +21,6 @@ module.exports = {
         "@storybook/addon-essentials",
         "@storybook/preset-create-react-app",
         "@storybook/addon-a11y",
-        "storybook-addon-material-ui"
+        '@harelpls/storybook-addon-materialui'
     ]
 }
