@@ -1,6 +1,6 @@
 {
   "name": "@anisa07/design-package-app-test",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "private": false,
   "dependencies": {
     "@fontsource/roboto": "^4.4.5",
