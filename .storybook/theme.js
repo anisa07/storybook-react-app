@@ -1,4 +1,5 @@
 import { createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/core/styles';
 
 export const theme = createMuiTheme({
     palette: {
@@ -20,3 +21,5 @@ export const theme = createMuiTheme({
         type: "light",
     },
 });
+
+export const themeProvider = (props) => <ThemeProvider theme={theme}>{props.children}</ThemeProvider>

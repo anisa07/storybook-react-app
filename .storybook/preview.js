@@ -5,7 +5,7 @@ import {GlobalStyle} from '../src/shared/global';
 
 export const decorators = [
     withMuiTheme({
-        "Custom light theme": theme
+        CustomLightTheme: theme
     }),
     Story => (
         <>
