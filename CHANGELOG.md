@@ -1,3 +1,16 @@
+# v0.1.8 (Sat Jul 03 2021)
+
+#### ⚠️ Pushed to `main`
+
+- update theme ([@anisa07](https://github.com/anisa07))
+- Merge branch 'main' of https://github.com/anisa07/storybook-react-app into main ([@anisa07](https://github.com/anisa07))
+
+#### Authors: 1
+
+- anisa07 ([@anisa07](https://github.com/anisa07))
+
+---
+
 # v0.1.7 (Sat Jul 03 2021)
 
 #### ⚠️ Pushed to `main`
