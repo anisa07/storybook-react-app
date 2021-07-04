@@ -1,3 +1,4 @@
+import {ThemeProvider} from "@material-ui/core/styles";
 import { createGlobalStyle, css } from 'styled-components';
 
 export const fontUrl = 'https://fonts.googleapis.com/css?family=Nunito+Sans:400,700,800,900';
@@ -10,3 +11,5 @@ export const GlobalStyle = createGlobalStyle`
  body {
    ${bodyStyles}
  }`;
+
+export const themeProvider = ThemeProvider;
