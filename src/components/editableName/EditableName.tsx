@@ -6,6 +6,8 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import Button from "@material-ui/core/Button";
 import {makeStyles} from "@material-ui/core";
+import {connect} from "react-redux";
+import {RootState,changeEditableName} from "../../lib/redux";
 
 interface EditableNameProps {
     label?: string,
@@ -76,3 +78,12 @@ export const EditableName = (props: EditableNameProps) => {
         </div>
     )
 }
+
+export default connect(
+    ({ editableName }: RootState) => ({
+        value: editableName,
+    }),
+    dispatch => ({
+        onChangeValue: (value: string) => dispatch(changeEditableName(value)),
+    })
+)(EditableName);

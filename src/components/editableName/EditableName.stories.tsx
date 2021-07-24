@@ -1,11 +1,13 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
-import { EditableName } from './EditableName';
+import EditableName from './EditableName';
+// import { Provider } from 'react-redux';
+// import store from '../../lib/editableNameRedux';
 
 export default {
   title: 'Example/EditableName',
   component: EditableName,
+  // decorators: [story => <Provider store={store}>{story()}</Provider>],
   argTypes: {
     backgroundColor: { control: 'color' },
   },
@@ -14,9 +16,6 @@ export default {
 const Template: ComponentStory<typeof EditableName> = (args) => <EditableName {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {
-  value: '',
-};
 
 export const DefaultWithLabel = Template.bind({});
 DefaultWithLabel.args = {
@@ -27,5 +26,4 @@ DefaultWithLabel.args = {
 export const DefaultWithValue = Template.bind({});
 DefaultWithValue.args = {
   ...DefaultWithLabel.args,
-  value: 'Test Value'
 };

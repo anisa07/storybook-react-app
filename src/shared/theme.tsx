@@ -1,21 +1,22 @@
 import {createMuiTheme} from "@material-ui/core/styles";
+import {error, info, primary, secondary, warning} from "./lightColors";
 
 export const theme = createMuiTheme({
     palette: {
         primary: {
-            main: "#073b4c",
+            main: primary,
         },
         warning: {
-            main: "#ef476f",
+            main: warning,
         },
         secondary: {
-            main: "#118ab2",
+            main: secondary,
         },
         error: {
-            main: '#9b2226'
+            main: error
         },
         info: {
-            main: "#06d6a0"
+            main: info
         },
         type: "light",
     },

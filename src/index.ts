@@ -4,3 +4,4 @@ import * as theme from './shared/theme';
 export { global, theme };
 
 export * from './components/editableName/EditableName';
+export * from './components/componentHeader/ComponentHeader';
