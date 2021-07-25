@@ -1,3 +1,16 @@
+# v0.1.15 (Mon Jul 26 2021)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of https://github.com/anisa07/storybook-react-app into main (askany07@gmail.com)
+- override tsconfig (askany07@gmail.com)
+
+#### Authors: 1
+
+- anisa07 (askany07@gmail.com)
+
+---
+
 # v0.1.13 (Sun Jul 25 2021)
 
 #### ⚠️ Pushed to `main`
