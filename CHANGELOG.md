@@ -1,3 +1,15 @@
+# v0.1.13 (Sun Jul 25 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix conflicts ([@anisa07](https://github.com/anisa07))
+
+#### Authors: 1
+
+- anisa07 ([@anisa07](https://github.com/anisa07))
+
+---
+
 # v0.1.13 (Mon Jul 26 2021)
 
 
