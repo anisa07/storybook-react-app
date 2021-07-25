@@ -1,3 +1,16 @@
+# v0.1.11 (Sat Jul 24 2021)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of https://github.com/anisa07/storybook-react-app into main ([@anisa07](https://github.com/anisa07))
+- add redux ([@anisa07](https://github.com/anisa07))
+
+#### Authors: 1
+
+- anisa07 ([@anisa07](https://github.com/anisa07))
+
+---
+
 # v0.1.10 (Sun Jul 04 2021)
 
 #### ⚠️ Pushed to `main`
