@@ -5,7 +5,7 @@ import DoneIcon from '@material-ui/icons/Done';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import Button from "@material-ui/core/Button";
-import {makeStyles} from "@material-ui/core";
+import { makeStyles } from '@material-ui/core/styles';
 import {connect} from "react-redux";
 import {RootState,changeEditableName} from "../../lib/redux";
 
@@ -70,7 +70,7 @@ export const EditableName = (props: EditableNameProps) => {
                             <DoneIcon/>
                         </IconButton>
                     </div>
-                    : <Button color="primary" onClick={toggleEditMode}>Edit
+                    : <Button aria-label="edit text" color="primary" onClick={toggleEditMode}>Edit
                         <Typography variant='caption' color={'secondary'} className={classes.caption}>{value}</Typography>
                         <EditOutlinedIcon/>
                     </Button>

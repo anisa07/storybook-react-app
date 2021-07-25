@@ -22,8 +22,3 @@ DefaultWithLabel.args = {
   ...Default.args,
   label: 'Test Label'
 };
-
-export const DefaultWithValue = Template.bind({});
-DefaultWithValue.args = {
-  ...DefaultWithLabel.args,
-};

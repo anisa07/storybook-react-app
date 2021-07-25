@@ -1,7 +1,7 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import configureStore from 'redux-mock-store';
-import { Default, DefaultWithValue, DefaultWithLabel } from './EditableName.stories';
+import { Default, DefaultWithLabel } from './EditableName.stories';
 import {Middleware, Dispatch, AnyAction, Store} from 'redux';
 import { Provider } from 'react-redux';
 
@@ -27,10 +27,10 @@ it('renders <EditableName /> with label and value', () => {
         editableName: 'Awesome Value'
     }
     store = mockStore(initialState);
-    render(<Provider store={store}><DefaultWithValue label={'Important Label'} /></Provider>);
+    render(<Provider store={store}><DefaultWithLabel label={'Important Label'} /></Provider>);
     expect(screen.getByRole("heading", {name: "Important Label"})).toBeTruthy();
     expect(screen.queryByText("textbox")).toBeFalsy();
-    expect(screen.getByRole("button", {name: "Edit Awesome Value"})).toBeTruthy();
+    expect(screen.getByText('Awesome Value')).toBeTruthy();
 });
 
 it('<EditableName /> should call onChangeValue', () => {

@@ -1,6 +1,94 @@
+import {CardModel} from "../../shared/types";
+import {ComponentHeader} from "../componentHeader/ComponentHeader";
+import {ChangeEvent, useState} from "react";
+import TextField from '@material-ui/core/TextField';
+import { makeStyles } from '@material-ui/core/styles';
+import Button from "@material-ui/core/Button";
+import {primary} from "../../shared/lightColors";
+import {connect} from "react-redux";
+import {changeCard, changeHeaderName, RootState} from "../../lib/redux";
 
-export const Card = () => {
+const useStyles = makeStyles({
+    cardContainer: {
+        margin: '0.75rem 0',
+        border: `1px solid ${primary}`,
+        padding: '1rem'
+    },
+    editContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        margin: '0.5rem 0'
+    },
+    cardButton: {
+        marginTop: '0.5rem',
+        alignSelf: 'flex-start'
+    }
+});
+
+interface CardProps {
+    index: number;
+    card: CardModel;
+    onUpdateCard: (updateCard: CardModel) => void;
+    onDeleteCard: (id: string) => void;
+}
+
+export const Card = (props: CardProps) => {
+    const {card, onUpdateCard, onDeleteCard} = props;
+    const [editCard, setEditCard] = useState(false);
+    const classes = useStyles();
+
+    const toggleEditCard = () => {
+        setEditCard(!editCard)
+    }
+
+    const editButtonTitle = () => editCard ? 'Close Edit' : 'Open Edit'
+
+    const handleDeleteCard = () => {
+        onDeleteCard(card.id);
+    }
+
+    const handleUpdateCardName = (newName: string) => {
+        onUpdateCard({...card, name: newName});
+    }
+
+    const handleUpdateCardDescription = (e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
+       onUpdateCard({...props.card, description: e.target?.value || ''})
+    }
+
     return (
-        <div></div>
+        <div className={classes.cardContainer} draggable="true">
+            <ComponentHeader
+                name={card.name}
+                label="Card Name"
+                buttonLabel="Delete Card"
+                onDeleteComponent={handleDeleteCard}
+                onUpdateComponentName={handleUpdateCardName}
+            />
+            <div className={classes.editContainer}>
+                {editCard && <>
+                    <TextField
+                        inputProps={{
+                            'data-testid': 'description'
+                        }}
+                        label="Description"
+                        multiline
+                        rows={4}
+                        value={card.description}
+                        onChange={handleUpdateCardDescription}
+                        variant="outlined"
+                    />
+                </>}
+                <Button className={classes.cardButton} onClick={toggleEditCard}>{editButtonTitle()}</Button>
+            </div>
+        </div>
     )
 }
+
+export default connect(
+    ({ card }: RootState) => ({
+        card
+    }),
+    dispatch => ({
+        onUpdateCard: (value: CardModel) => dispatch(changeCard(value)),
+    })
+)(Card);

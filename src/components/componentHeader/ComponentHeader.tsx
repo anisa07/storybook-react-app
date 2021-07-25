@@ -1,7 +1,7 @@
 import {EditableName} from '../editableName/EditableName';
 import CloseIcon from '@material-ui/icons/Close';
 import Button from "@material-ui/core/Button";
-import {makeStyles} from "@material-ui/core";
+import { makeStyles } from '@material-ui/core/styles';
 import {warning} from "../../shared/lightColors";
 import {connect} from "react-redux";
 import {changeHeaderName, RootState} from "../../lib/redux";
@@ -42,6 +42,7 @@ export const ComponentHeader = (props: ComponentHeaderProps) => {
                 onChangeValue={handleUpdateComponent}
             />
             <Button
+                aria-label="remove item"
                 className={classes.closeIcon}
                 onClick={onDeleteComponent}>
                 <CloseIcon />
@@ -57,6 +58,5 @@ export default connect(
     }),
     dispatch => ({
         onUpdateComponentName: (value: string) => dispatch(changeHeaderName(value)),
-        onDeleteComponent: () => {console.log('Item deleted!!!')}
     })
 )(ComponentHeader);
