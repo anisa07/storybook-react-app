@@ -1,3 +1,16 @@
+# v0.1.12 (Sun Jul 25 2021)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of https://github.com/anisa07/storybook-react-app into main ([@anisa07](https://github.com/anisa07))
+- add card ([@anisa07](https://github.com/anisa07))
+
+#### Authors: 1
+
+- anisa07 ([@anisa07](https://github.com/anisa07))
+
+---
+
 # v0.1.11 (Sat Jul 24 2021)
 
 #### ⚠️ Pushed to `main`
