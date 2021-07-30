@@ -20,6 +20,9 @@ const useStyles = makeStyles({
         textTransform: "capitalize",
         display: "inline-block",
         margin: '0 0.5rem'
+    },
+    nameContainer: {
+        display: 'flex'
     }
 })
 
@@ -64,7 +67,7 @@ export const EditableName = (props: EditableNameProps) => {
             {!editMode && <Typography color="secondary" variant='subtitle2'>{controlLabel()}</Typography>}
             {
                 editMode
-                    ? <div>
+                    ? <div className={classes.nameContainer}>
                         <TextField color={'primary'} label={controlLabel()} value={value} onChange={handleChangeValue} onBlur={handleUpdate}/>
                         <IconButton color="primary" aria-label="apply text" component="span" onClick={handleUpdate}>
                             <DoneIcon/>

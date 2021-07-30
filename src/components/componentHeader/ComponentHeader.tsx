@@ -1,10 +1,11 @@
 import {EditableName} from '../editableName/EditableName';
 import CloseIcon from '@material-ui/icons/Close';
 import Button from "@material-ui/core/Button";
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import {warning} from "../../shared/lightColors";
 import {connect} from "react-redux";
 import {changeHeaderName, RootState} from "../../lib/redux";
+import Tooltip from '@material-ui/core/Tooltip';
 
 interface ComponentHeaderProps {
     name: string;
@@ -17,12 +18,14 @@ interface ComponentHeaderProps {
 const useStyles = makeStyles({
     componentHeaderContainer: {
         display: 'flex',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        alignItems: "baseline",
     },
     closeIcon: {
         paddingLeft: '0.3rem',
         paddingRight: '0.3rem',
-        color: warning
+        color: warning,
+        minWidth: '36px',
     }
 })
 
@@ -41,19 +44,20 @@ export const ComponentHeader = (props: ComponentHeaderProps) => {
                 value={name}
                 onChangeValue={handleUpdateComponent}
             />
-            <Button
-                aria-label="remove item"
-                className={classes.closeIcon}
-                onClick={onDeleteComponent}>
-                <CloseIcon />
-                {buttonLabel}
-            </Button>
+            <Tooltip title={buttonLabel || "Delete Item"}>
+                <Button
+                    aria-label="remove item"
+                    className={classes.closeIcon}
+                    onClick={onDeleteComponent}>
+                    <CloseIcon/>
+                </Button>
+            </Tooltip>
         </div>
     )
 }
 
 export default connect(
-    ({ headerName }: RootState) => ({
+    ({headerName}: RootState) => ({
         name: headerName,
     }),
     dispatch => ({

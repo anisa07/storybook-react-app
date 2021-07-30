@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Button from "@material-ui/core/Button";
 import {primary} from "../../shared/lightColors";
 import {connect} from "react-redux";
-import {changeCard, changeHeaderName, RootState} from "../../lib/redux";
+import {changeCard, RootState} from "../../lib/redux";
 
 const useStyles = makeStyles({
     cardContainer: {
@@ -56,7 +56,7 @@ export const Card = (props: CardProps) => {
     }
 
     return (
-        <div className={classes.cardContainer} draggable="true">
+        <div className={classes.cardContainer}>
             <ComponentHeader
                 name={card.name}
                 label="Card Name"
