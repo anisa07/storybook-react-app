@@ -61,7 +61,7 @@ export const EditableName = (props: EditableNameProps) => {
         setValue(e.target.value);
     }
 
-    const controlLabel = () => label || 'Editable Name'
+    const controlLabel = () => !value && label ? label : '';
 
     return (
         <div>
@@ -81,7 +81,7 @@ export const EditableName = (props: EditableNameProps) => {
                             <DoneIcon/>
                         </IconButton>
                     </div>
-                    : <Button aria-label="edit text" color="primary" onClick={toggleEditMode}>Edit
+                    : <Button aria-label="edit text" color="primary" onClick={toggleEditMode}>
                         <Typography variant='subtitle1' color={'secondary'} className={classes.caption}>{value}</Typography>
                         <EditOutlinedIcon/>
                     </Button>
