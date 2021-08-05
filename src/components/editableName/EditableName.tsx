@@ -19,11 +19,12 @@ const useStyles = makeStyles({
     caption: {
         textTransform: "capitalize",
         display: "inline-block",
-        margin: '0 0.5rem'
+        margin: '0 0.5rem',
+        fontWeight: 'bold'
     },
     nameContainer: {
         display: 'flex'
-    }
+    },
 })
 
 export const EditableName = (props: EditableNameProps) => {
@@ -68,13 +69,20 @@ export const EditableName = (props: EditableNameProps) => {
             {
                 editMode
                     ? <div className={classes.nameContainer}>
-                        <TextField color={'primary'} label={controlLabel()} value={value} onChange={handleChangeValue} onBlur={handleUpdate}/>
+                        <TextField
+                            autoFocus={true}
+                            color={'primary'}
+                            label={controlLabel()}
+                            value={value}
+                            onChange={handleChangeValue}
+                            onBlur={handleUpdate}
+                        />
                         <IconButton color="primary" aria-label="apply text" component="span" onClick={handleUpdate}>
                             <DoneIcon/>
                         </IconButton>
                     </div>
                     : <Button aria-label="edit text" color="primary" onClick={toggleEditMode}>Edit
-                        <Typography variant='caption' color={'secondary'} className={classes.caption}>{value}</Typography>
+                        <Typography variant='subtitle1' color={'secondary'} className={classes.caption}>{value}</Typography>
                         <EditOutlinedIcon/>
                     </Button>
             }

@@ -1,11 +1,12 @@
 import {ColumnModel, CardModel} from "../../shared/types";
 import {createCard} from "../../helpers/boardHelper";
 import {Card} from "../card/Card";
-import {Draggable, Droppable} from "react-beautiful-dnd";
+import {Draggable, DraggableStateSnapshot, Droppable} from "react-beautiful-dnd";
 import React from "react";
 import Button from "@material-ui/core/Button";
 import {makeStyles} from "@material-ui/core/styles";
 import {theme} from "../../shared/theme";
+import {info} from "../../shared/lightColors";
 
 interface CardsProps {
     column: ColumnModel,
@@ -18,7 +19,7 @@ const useStyles = makeStyles({
         padding: '1.5rem',
         margin: '1rem 0',
         '&::after': {
-            content: '"Create or Drag Card"',
+            content: '"Drop Card Here"',
             display: 'block',
             textAlign: 'center',
             color: theme.palette.secondary.main
@@ -26,6 +27,19 @@ const useStyles = makeStyles({
     }
 });
 
+// function getStyle(style: {}, snapshot: DraggableStateSnapshot) {
+//     if (!snapshot.isDropAnimating || !snapshot.dropAnimation) {
+//         return style;
+//     }
+//     const {moveTo, curve, duration} = snapshot.dropAnimation;
+//     const translate = `translate(${moveTo.x}px, ${moveTo.y}px)`;
+//     const rotate = 'rotate(1turn)';
+//     return {
+//         ...style,
+//         transform: `${translate} ${rotate}`,
+//         transition: `all ${curve} ${duration + 1}s`,
+//     };
+// }
 
 export const Cards = (props: CardsProps) => {
     const {column, onUpdateColumn} = props;
@@ -65,15 +79,25 @@ export const Cards = (props: CardsProps) => {
                     {
                         column.cards.map((card, index) =>
                             <Draggable key={card.id} draggableId={card.id} index={index}>
-                                {(provided) =>
-                                    <div ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
-                                        <Card
-                                            index={index}
-                                            card={card}
-                                            onUpdateCard={handleUpdateCard}
-                                            onDeleteCard={handleDeleteCard}
-                                        />
-                                    </div>
+                                {(provided, snapshot) => {
+                                    const style = {
+                                        margin: '10px 0',
+                                        backgroundColor: snapshot.isDragging ? info : '',
+                                        ...provided.draggableProps.style,
+                                    };
+                                    return (
+                                        <div
+                                             ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}
+                                             style={style}>
+                                            <Card
+                                                index={index}
+                                                card={card}
+                                                onUpdateCard={handleUpdateCard}
+                                                onDeleteCard={handleDeleteCard}
+                                            />
+                                        </div>
+                                    )
+                                }
                                 }
                             </Draggable>)
                     }

@@ -4,15 +4,14 @@ import {ChangeEvent, useState} from "react";
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from "@material-ui/core/Button";
-import {primary} from "../../shared/lightColors";
 import {connect} from "react-redux";
 import {changeCard, RootState} from "../../lib/redux";
+import {useCommonStyles} from "../../shared/style";
 
 const useStyles = makeStyles({
     cardContainer: {
-        margin: '0.75rem 0',
-        border: `1px solid ${primary}`,
-        padding: '1rem'
+        // margin: '0.75rem 0',
+        padding: '1rem',
     },
     editContainer: {
         display: 'flex',
@@ -22,7 +21,7 @@ const useStyles = makeStyles({
     cardButton: {
         marginTop: '0.5rem',
         alignSelf: 'flex-start'
-    }
+    },
 });
 
 interface CardProps {
@@ -36,6 +35,7 @@ export const Card = (props: CardProps) => {
     const {card, onUpdateCard, onDeleteCard} = props;
     const [editCard, setEditCard] = useState(false);
     const classes = useStyles();
+    const commonStyles = useCommonStyles();
 
     const toggleEditCard = () => {
         setEditCard(!editCard)
@@ -56,7 +56,7 @@ export const Card = (props: CardProps) => {
     }
 
     return (
-        <div className={classes.cardContainer}>
+        <div className={`${classes.cardContainer} ${commonStyles.border}`}>
             <ComponentHeader
                 name={card.name}
                 label="Card Name"

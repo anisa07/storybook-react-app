@@ -2403,6 +2403,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/coming-soon@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/coming-soon/-/coming-soon-4.5.0.tgz#a9256a47e3720af961337d10f140bfcf0ba1a0ee"
+  integrity sha512-rRVEyOCtrpaQGeBEjueySf7rbYJHbxH76MzwklKvhWZObqobpEl/MK3vzImfMKGnWUxdgNSBjqeelvs10hRWGQ==
+
 "@fontsource/roboto@^4.4.5":
   version "4.4.5"
   resolved "https://registry.yarnpkg.com/@fontsource/roboto/-/roboto-4.4.5.tgz#9ef1b9288ac4a97b97906da920c63c08dba97c89"

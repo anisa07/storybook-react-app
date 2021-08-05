@@ -5,6 +5,7 @@ import {connect} from "react-redux";
 import {changeColumn, RootState} from "../../lib/redux";
 import {makeStyles} from "@material-ui/core/styles";
 import {DragDropContext, DragUpdate} from "react-beautiful-dnd";
+import {useCommonStyles} from "../../shared/style";
 
 interface ColumnProps {
     index: number,
@@ -16,18 +17,18 @@ interface ColumnProps {
 const useStyles = makeStyles({
     column: {
         width: '300px',
-        borderRight: '1px solid',
         marginRight: '1rem',
         padding: '1rem',
         display: 'flex',
         flexDirection: 'column',
-        height: '550px'
+        minHeight: '550px',
     },
 });
 
 export const Column = (props: ColumnProps) => {
     const {column, onUpdateColumn, onDeleteColumn} = props;
     const classes = useStyles();
+    const commonStyles = useCommonStyles();
 
     const handleDeleteColumn = () => {
         onDeleteColumn(column.id);
@@ -39,7 +40,7 @@ export const Column = (props: ColumnProps) => {
     }
 
     return (
-        <div className={classes.column}>
+        <div className={`${classes.column} ${commonStyles.border}`}>
             <ComponentHeader
                 name={column.name}
                 label="Column Name"

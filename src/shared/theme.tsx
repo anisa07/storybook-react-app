@@ -1,7 +1,21 @@
 import {createMuiTheme} from "@material-ui/core/styles";
 import {error, info, primary, secondary, warning} from "./lightColors";
 
+// const theme = createMuiTheme({
+//     typography: {
+//         fontFamily: [
+//             'Chilanka',
+//             'cursive',
+//         ].join(','),
+//     },
+//     });
+
 export const theme = createMuiTheme({
+    typography: {
+        fontFamily: [
+            'Coming Soon',
+        ].join(','),
+    },
     palette: {
         primary: {
             main: primary,

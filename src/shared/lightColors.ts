@@ -1,5 +1,5 @@
-export const primary = "#073b4c";
-export const warning = "#ef476f";
-export const secondary = "#118ab2";
-export const error = "#9b2226";
-export const info = "#06d6a0";
+export const primary = "#2d232e";
+export const warning = "#ef3331";
+export const secondary = "#284b63";
+export const error = "#a71ccd";
+export const info = "rgba(241,241,241,0.97)";

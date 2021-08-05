@@ -1,10 +1,10 @@
 import { withMuiTheme } from "@harelpls/storybook-addon-materialui";
 import {theme} from "../src/shared/theme";
-import '@fontsource/roboto';
 import {GlobalStyle} from '../src/shared/global';
 import {Provider} from "react-redux";
 import React from "react";
 import store from '../src/lib/redux';
+import "@fontsource/coming-soon";
 
 export const decorators = [
     withMuiTheme({
