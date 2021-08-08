@@ -1,3 +1,15 @@
+# v0.1.20 (Sun Aug 08 2021)
+
+#### ⚠️ Pushed to `main`
+
+- add styles (askany07@gmail.com)
+
+#### Authors: 1
+
+- anisa07 (askany07@gmail.com)
+
+---
+
 # v0.1.19 (Sun Aug 08 2021)
 
 #### ⚠️ Pushed to `main`
