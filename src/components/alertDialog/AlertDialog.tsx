@@ -19,7 +19,7 @@ interface AlertDialogProps {
 
 const useStyles = makeStyles({
     agreeButton: {
-        color: theme.palette.warning.color
+        color: theme.palette.warning.main
     }
 })
 
