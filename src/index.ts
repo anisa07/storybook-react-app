@@ -2,8 +2,9 @@ import * as global from './shared/global';
 import * as theme from './shared/theme';
 import * as types from './shared/types';
 import * as lightColors from './shared/lightColors';
+import * as styles from './shared/style';
 
-export { global, theme, types, lightColors };
+export { global, theme, types, lightColors, styles };
 
 export * from './components/editableName/EditableName';
 export * from './components/componentHeader/ComponentHeader';
