@@ -1,7 +1,7 @@
 import {ColumnModel, CardModel} from "../../shared/types";
 import {createCard} from "../../helpers/boardHelper";
 import {Card} from "../card/Card";
-import {Draggable, DraggableStateSnapshot, Droppable} from "react-beautiful-dnd";
+import {Draggable, Droppable} from "react-beautiful-dnd";
 import React from "react";
 import Button from "@material-ui/core/Button";
 import {makeStyles} from "@material-ui/core/styles";
@@ -26,20 +26,6 @@ const useStyles = makeStyles({
         }
     }
 });
-
-// function getStyle(style: {}, snapshot: DraggableStateSnapshot) {
-//     if (!snapshot.isDropAnimating || !snapshot.dropAnimation) {
-//         return style;
-//     }
-//     const {moveTo, curve, duration} = snapshot.dropAnimation;
-//     const translate = `translate(${moveTo.x}px, ${moveTo.y}px)`;
-//     const rotate = 'rotate(1turn)';
-//     return {
-//         ...style,
-//         transform: `${translate} ${rotate}`,
-//         transition: `all ${curve} ${duration + 1}s`,
-//     };
-// }
 
 export const Cards = (props: CardsProps) => {
     const {column, onUpdateColumn} = props;

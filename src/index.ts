@@ -11,3 +11,4 @@ export * from './components/card/Card';
 export * from './components/cards/Cards';
 export * from './components/column/Column';
 export * from './components/columns/Columns';
+export * from './components/alertDialog/AlertDialog';

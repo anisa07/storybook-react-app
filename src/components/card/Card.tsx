@@ -10,7 +10,6 @@ import {useCommonStyles} from "../../shared/style";
 
 const useStyles = makeStyles({
     cardContainer: {
-        // margin: '0.75rem 0',
         padding: '1rem',
     },
     editContainer: {

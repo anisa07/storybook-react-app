@@ -16,6 +16,7 @@ interface ColumnsProps {
 const useStyles = makeStyles({
     columns: {
         display: 'flex',
+        overflow: "scroll"
     },
 });
 

@@ -22,6 +22,7 @@ const useStyles = makeStyles({
         display: 'flex',
         flexDirection: 'column',
         minHeight: '550px',
+        minWidth: '250px'
     },
 });
 
