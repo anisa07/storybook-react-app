@@ -1,3 +1,15 @@
+# v0.1.19 (Sun Aug 08 2021)
+
+#### ⚠️ Pushed to `main`
+
+- add alert dialog ([@anisa07](https://github.com/anisa07))
+
+#### Authors: 1
+
+- anisa07 ([@anisa07](https://github.com/anisa07))
+
+---
+
 # v0.1.18 (Thu Aug 05 2021)
 
 #### ⚠️ Pushed to `main`
